@@ -1,0 +1,6 @@
+pytorch_structure2vec-master/
+*.pyc
+result.txt
+extracted_features*
+.DS_Store
+.vscode
