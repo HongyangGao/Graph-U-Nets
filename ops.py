@@ -92,13 +92,13 @@ class GraphPool(nn.Module):
         super(GraphPool, self).__init__()
         self.k = k
         self.proj = nn.Linear(in_dim, 1).cuda()
-        self.tanh = nn.Tanh()
+        self.sigmoid = nn.Sigmoid()
 
     def forward(self, A, X):
         scores = self.proj(X)
         scores = torch.abs(scores)
         scores = torch.squeeze(scores)
-        scores = self.tanh(scores/100)
+        scores = self.sigmoid(scores/100)
         num_nodes = A.shape[0]
         values, idx = torch.topk(scores, int(self.k*num_nodes))
         new_X = X[idx, :]
