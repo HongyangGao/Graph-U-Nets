@@ -85,14 +85,14 @@ class GraphUnpool(nn.Module):
         new_X[idx] = X
         return A, new_X
 
-
+    
 class GraphPool(nn.Module):
 
     def __init__(self, k, in_dim):
         super(GraphPool, self).__init__()
         self.k = k
         self.proj = nn.Linear(in_dim, 1).cuda()
-        self.sigmoid = nn.Sigmoid()
+        self.tanh = nn.Tanh()
 
     def forward(self, A, X):
         scores = self.proj(X)
@@ -102,6 +102,8 @@ class GraphPool(nn.Module):
         num_nodes = A.shape[0]
         values, idx = torch.topk(scores, int(self.k*num_nodes))
         new_X = X[idx, :]
+        values = torch.unsqueeze(values, -1)
+        new_X = torch.mul(new_X, values)
         A = A[idx, :]
         A = A[:, idx]
         return A, new_X, idx
