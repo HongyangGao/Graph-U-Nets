@@ -92,7 +92,7 @@ class GraphPool(nn.Module):
         super(GraphPool, self).__init__()
         self.k = k
         self.proj = nn.Linear(in_dim, 1).cuda()
-        self.tanh = nn.Tanh()
+        self.sigmoid = nn.Sigmoid()
 
     def forward(self, A, X):
         scores = self.proj(X)
