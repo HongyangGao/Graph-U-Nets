@@ -31,9 +31,11 @@ Installation
 Type
 
     ./run_GNN.sh DATA FOLD GPU
-to run on dataset using fold number (1-10). You can run
+to run on dataset using fold number (1-10).
 
-    ./run_GUNet.sh DD 0 0
+You can run
+
+    ./run_GNN.sh DD 0 0
 to run on DD dataset with 10-fold cross
 validation on GPU #0.
 
