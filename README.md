@@ -1,5 +1,5 @@
-PyTorch Graph U-Nets
-=============
+PyTorch Implementation of Graph U-Nets
+======================================
 
 Created by [Hongyang Gao](http://people.tamu.edu/~hongyang.gao/), and
 [Shuiwang Ji](http://people.tamu.edu/~sji/) at Texas A&M University.
@@ -7,7 +7,22 @@ Created by [Hongyang Gao](http://people.tamu.edu/~hongyang.gao/), and
 About
 -----
 
-PyTorch implementation of Graph U-Nets. Check https://arxiv.org/abs/1905.05178 for more information.
+PyTorch implementation of Graph U-Nets. Check http://proceedings.mlr.press/v97/gao19a/gao19a.pdf for more information.
+
+Methods
+-------
+
+### Graph Pooling Layer
+
+![gPool](./doc/GPool.png)
+
+### Graph Unpooling Layer
+
+![gPool](./doc/GUnpool.png)
+
+### Graph U-Net
+
+![gPool](./doc/GUnet.png)
 
 Installation
 ------------
@@ -47,8 +62,9 @@ Reference
 If you find the code useful, please cite our paper:
 
     @inproceedings{gao2019graph,
-      title={Graph {U-nets}},
-      author={Gao, Hongyang and Ji, Shuiwang},
-      booktitle={Proceedings of The 36th International Conference on Machine Learning},
-      year={2019},
+        title={Graph U-Nets},
+        author={Gao, Hongyang and Ji, Shuiwang},
+        booktitle={International Conference on Machine Learning},
+        pages={2083--2092},
+        year={2019}
     }
