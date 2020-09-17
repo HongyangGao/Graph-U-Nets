@@ -1,8 +1,8 @@
 PyTorch Implementation of Graph U-Nets
 ======================================
 
-Created by [Hongyang Gao](http://people.tamu.edu/~hongyang.gao/), and
-[Shuiwang Ji](http://people.tamu.edu/~sji/) at Texas A&M University.
+Created by [Hongyang Gao](https://faculty.sites.iastate.edu/hygao/) @ Iowa State University, and
+[Shuiwang Ji](http://people.tamu.edu/~sji/) @ Texas A&M University.
 
 About
 -----
